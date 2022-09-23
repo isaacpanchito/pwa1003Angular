@@ -1,0 +1,23 @@
+thead{
+    color:rgb(167, 26, 47);
+}
+.btn-primary{
+    background-color:cornflowerblue;
+    border-radius:35px;
+}
+.card-header{
+    background-color: cornflowerblue;
+    color: beige;
+}
+input{
+    border-radius: 35px;
+}
+input:hover{
+    background-color: rgba(79, 82, 79, 0.253);
+    border-color: cornflowerblue;
+    ;
+}
+img{
+    width: 300px;
+        
+}

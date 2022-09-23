@@ -31,5 +31,6 @@ export class SumaComponent{
         break;
     }
   }
+  
 
 }

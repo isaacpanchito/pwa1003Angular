@@ -1,0 +1,48 @@
+<div class="card">
+    <div class="card-header">
+        Lista de productos
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2">Filtrar por:</div>
+            <div class="col-md-4">
+                <input [(ngModel)]="listFiltrer" type="text" class="form-control" name="filtrer">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Filtro:</h3>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table" *ngIf="products.length">
+                <thead>
+                        <tr>
+                            <th>
+                            <button type="button" class="btn btn-primary" (click)="muestraImagen()">{{muestraImg?'Ocultar':'Mostrar'}} Imagen</button>
+                        </th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Modelos</th>
+                        <th>Precio</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products">
+                        <td><img *ngIf="muestraImg" [src]="product.imageURL" alt="imagen del auto"
+                            [title]="product.productoName"
+                            >
+                        </td>
+                        <td>{{product.productoName | uppercase}}</td>
+                        <td>{{product.decripcion}}</td>
+                        <td>{{product.crerateDate |date:'dd/MM/yy'}}</td>
+                        <td>{{product.price |currency}}</td>
+                        <td>{{product.ratin}}</td>
+                    </tr>                        
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
