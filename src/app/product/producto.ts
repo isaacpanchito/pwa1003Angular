@@ -1,8 +1,8 @@
-export interface IProducto {
+export interface Producto {
     product1:number;
     productoName:string;
     decripcion:string;
-    listFiltrer:string;
+    listFilter:string;
     crerateDate:string;
     price:number;
     ratin:number;

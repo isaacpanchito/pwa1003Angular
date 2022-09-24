@@ -9,6 +9,11 @@ import { RestaComponent } from './calculos/resta/resta.component';
 import {FormsModule} from '@angular/forms'; //agregar esto para el ngModel
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductoFilterPipe } from './product/producto-filter.pipe';
+import { MenuComponent } from './menu/menu.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -16,12 +21,17 @@ import { ProductoFilterPipe } from './product/producto-filter.pipe';
     SumaComponent,
     RestaComponent,
     ProductListComponent,
-    ProductoFilterPipe
+    ProductoFilterPipe,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule //esto tabie para el ngModel
+    FormsModule, //esto tabie para el ngModel
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

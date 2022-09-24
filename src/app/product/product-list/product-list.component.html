@@ -6,9 +6,10 @@
         <div class="row">
             <div class="col-md-2">Filtrar por:</div>
             <div class="col-md-4">
-                <input [(ngModel)]="listFiltrer" type="text" class="form-control" name="filtrer">
+                <input [(ngModel)]="listFilter" type="text" class="form-control" name="filter">
             </div>
         </div>
+    
 
         <div class="row">
             <div class="col-md-6">
@@ -18,8 +19,8 @@
         <div class="table-responsive">
             <table class="table" *ngIf="products.length">
                 <thead>
-                        <tr>
-                            <th>
+                    <tr>
+                        <th>
                             <button type="button" class="btn btn-primary" (click)="muestraImagen()">{{muestraImg?'Ocultar':'Mostrar'}} Imagen</button>
                         </th>
                         <th>Nombre</th>
@@ -30,7 +31,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let product of products">
+                    <tr *ngFor="let product of products | productoFilter:listFilter">
                         <td><img *ngIf="muestraImg" [src]="product.imageURL" alt="imagen del auto"
                             [title]="product.productoName"
                             >

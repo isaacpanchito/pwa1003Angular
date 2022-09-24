@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IProducto } from '../producto';
+import { Producto } from '../producto';
+
 
 @Component({
   selector: 'app-product-list',
@@ -8,18 +9,19 @@ import { IProducto } from '../producto';
 })
 export class ProductListComponent {
   constructor() {}
+  listFilter:string='';
   muestraImg:boolean=false;
   muestraImagen():void{
     this.muestraImg=!this.muestraImg;
 
   }
 
-  products:IProducto [] = [
+  products:Producto[]=[
     {
       "product1": 1,
       "productoName": 'Sentra',
       "decripcion": 'auto familiar 4 puertas',
-      "listFiltrer":'',
+      "listFilter":'',
       "crerateDate": 'Mayo 21, 2011',
       "price": 130000,
       "ratin": 3.5,
@@ -30,7 +32,7 @@ export class ProductListComponent {
       "product1": 2,
       "productoName": 'Volvo xq40',
       "decripcion": 'Camioneta electrica 4 puetas',
-      "listFiltrer":'',
+      "listFilter":'',
       "crerateDate": 'Marzo 23 2022',
       "price": 1400000,
       "ratin": 4.5,
@@ -41,7 +43,7 @@ export class ProductListComponent {
      "product1": 2,
      "productoName": 'Jetta',
      "decripcion": 'auto familiar 4 puertas',
-     "listFiltrer":'',
+     "listFilter":'',
      "crerateDate": 'Junio 12, 2022',
      "price": 150000,
      "ratin": 4.2,
