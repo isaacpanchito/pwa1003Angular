@@ -1,0 +1,16 @@
+
+
+<div class="container">
+    <div class="row">
+        <div>
+            Numero: <input type="text" [(ngModel)]="numero" name="numero"><br><br>
+            <button type="button" (click)="tabla()">Calcular</button>
+        </div>
+        <div>
+            <spam *ngFor="let total of totalA">
+        
+                {{total}} <br>
+            </spam>
+        </div>
+    </div>
+</div>

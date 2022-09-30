@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="col-sm-6">
+    <div class="row">
+      <!--el ngModel es un controlador entre el html y typescrit-->
+      nombre:
+      <input type="text" [(ngModel)]="nombre" name="nombre" id="" /><br />
+      Cantidad de compradores (MAX 5):
+      <input type="text" [(ngModel)]="comprador" name="comrpador" id="" />
+      <br />
+      Tarjeta Cinepolis:
+      <input type="radio" value="si" [(ngModel)]="tarjeta" />Si
+      <input type="radio" value="no" />No
+    </div>
+  </div>
+</div>
+<div>
+  <br />
+  <br />
+  Cantidad de Boletos:
+  <input type="text" [(ngModel)]="boletos" name="boletos" /><br />
+
+  <button type="button" (click)="procesar()">Procesar</button>
+
+  <h1>Comprador Principal: {{ nombre }}</h1>
+  <h2>Boletos comprados: {{ boletos }}</h2>
+  <h2>Total: {{ total }}</h2>
+  <h2>{{ error }}</h2>
+</div>
