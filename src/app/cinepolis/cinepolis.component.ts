@@ -28,19 +28,19 @@ export class CinepolisComponent {
       this.error=""
       if(this.boletos<=2){
         this.total=this.boletos*12;
-        if(this.tarjeta="si"){
+        if(this.tarjeta=="si"){
           this.total=this.total-(this.total*0.10);
         }
       }
       else if(this.boletos>=3 && this.boletos<=5){
         this.total=(this.boletos*12)-((this.boletos*12)*0.10);
-        if(this.tarjeta="si"){
+        if(this.tarjeta=="si"){
           this.total=this.total-(this.total*0.10);
         }
       }
       else if(this.boletos>=6){
         this.total=(this.boletos*12)-((this.boletos*12)*0.15);
-        if(this.tarjeta="si"){
+        if(this.tarjeta=="si"){
           this.total=this.total-(this.total*0.10);
         }
       }

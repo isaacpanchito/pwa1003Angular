@@ -1,0 +1,23 @@
+
+.btn-8 {    
+  background-color: rgb(83, 47, 181);
+  background-image: none;
+  color: #fff;
+  margin: 0;    
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.btn-8 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+
+
+.container{
+    background-color: beige;
+}
+    
