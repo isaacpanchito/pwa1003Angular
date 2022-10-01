@@ -46,7 +46,9 @@ export class CinepolisComponent {
       }
     }
     else{
-      this.error="Máximo 7 boletos por comprador"
+      this.error="Máximo 7 boletos por comprador";
+      this.total=0;
+      this.boletos=0;
     }
     
 
